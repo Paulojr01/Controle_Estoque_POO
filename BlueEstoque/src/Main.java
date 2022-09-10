@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+import br_com_Controle_Estoque_POO.Filial;
 import br_com_Controle_Estoque_POO.Textos;
 
 public class Main {
@@ -8,6 +9,9 @@ public class Main {
         Textos texto = new Textos();
         Scanner ler = new Scanner(System.in);
 
+        Filial empresa1 = new Filial("Jatiboca", 100);
+        Filial empresa2 = new Filial("Pontal", 50);
+        
         do {
             
         
