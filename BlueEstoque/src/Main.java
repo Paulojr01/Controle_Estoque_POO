@@ -19,8 +19,8 @@ public class Main {
             opcao = ler.next();
     
             switch (opcao) {
-                case "1":
-                    //Entrada de Estoque
+                case "1": 
+                           texto.mostrarQualEmpresa(); //Entrada de Estoque
                     break;
     
                 case "2":
@@ -29,7 +29,7 @@ public class Main {
     
                 case "3":
                 // Transferência de Estoque
-                    break;
+                    break;  
                 
                 case "4":
                 // Consulta Estoque
@@ -45,6 +45,8 @@ public class Main {
             }
         
         } while (  ! opcao.equals("5") ); // diferente com String
+
+
 
         
 

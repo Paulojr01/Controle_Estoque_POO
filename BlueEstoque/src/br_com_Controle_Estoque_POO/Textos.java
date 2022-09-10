@@ -14,8 +14,9 @@ public class Textos {
         System.out.println("Entrada Inválida");
     }
 
-    public void mostrarDespedida(){
-        System.out.println("Bom dia e um bom trabalho !!! ");
+    public void mostrarQualEmpresa()
+    {
+        System.out.print(" 1 - Jatiboca\n  2 - Pontal\n   Opção -> ");
     }
 
 }
