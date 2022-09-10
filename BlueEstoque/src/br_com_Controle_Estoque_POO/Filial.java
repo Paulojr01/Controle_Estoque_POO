@@ -1,3 +1,4 @@
+
 package br_com_Controle_Estoque_POO;
 
 public class Filial {
@@ -27,5 +28,8 @@ public class Filial {
         this.estoque_filial = estoque_filial;
     }
 
+
+
+}
 
 }
