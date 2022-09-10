@@ -30,21 +30,37 @@ public class Main {
                     switch (opcao2){
                         case "1":
                             System.out.printf("Qual é a quantidade  que deseja da entrada Jatiboca->" + empresa1.getQtqEntrada());
-                            empresa1.soma(05);
-                            System.out.println("\nestoque atualizado jatiboca " + empresa1.getSoma());
+                            empresa1.calcular();  
+                            System.out.println("\nestoque atualizado jatiboca " + empresa1.calcular());
                         break;
 
                         case "2":
-                            System.out.printf("Qual é a quantidade  que deseja da entrada Pontal->" + empresa2.getEstoque_filial());           
+                            System.out.printf("Qual é a quantidade  que deseja da entrada Pontal->" + empresa2.getQtqEntrada());
+                            empresa1.calcular();  
+                            System.out.println("\nestoque atualizado jatiboca " + empresa2.calcular());       
                         break;    
                      }
                     break;
 
-
-
                     
-                case "2":
-                // Saída de Estoque
+                case "2":// Saída de Estoque
+                    texto.mostrarQualEmpresa();
+                    opcao2 = ler.next();
+
+                    switch (opcao2){
+                        case "1":
+                            System.out.printf("quantidade atual->" + empresa1.getEstoque_filial());
+                            empresa1.darBaixa(10);
+                            System.out.println("\nestoque atualizado jatiboca " + empresa1.getEstoque_filial());
+                            break;
+
+                        case "2":
+                            System.out.printf("quantidade atual->" + empresa2.getEstoque_filial());
+                            empresa2.darBaixa(10);
+                            System.out.println("\nestoque atualizado jatiboca " + empresa2.getEstoque_filial());
+                         break;    
+                        
+                    }
                     break;
     
                 case "3":

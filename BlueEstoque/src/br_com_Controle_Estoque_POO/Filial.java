@@ -8,14 +8,6 @@ public class Filial {
     private double qtqEntrada;
     private double soma;
 
-    public double getSoma() {
-        return soma;
-    }
-
-    public void setSoma(double soma) {
-        this.soma =  qtqEntrada + estoque_filial;
-    }
-
     public String getNome_filial() {
         return nome_filial;
     }
@@ -50,12 +42,16 @@ public class Filial {
     }
 
 
-    public void soma(double soma){
-        this.soma =  qtqEntrada + estoque_filial;
-        
+    public Double calcular (){
+        return soma =  qtqEntrada + estoque_filial;
 
     }
 
+    public void darBaixa(int qtde){
+        if (qtde <= this.estoque_filial)
+            this.estoque_filial -= qtde;
+        else
+          System.out.println("Impossível dar baixa no estoque");
 
 
 
@@ -88,5 +84,5 @@ public class Filial {
 
 
 
-
+}
 }
