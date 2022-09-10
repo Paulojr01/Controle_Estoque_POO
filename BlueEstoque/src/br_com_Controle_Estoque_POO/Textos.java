@@ -14,5 +14,9 @@ public class Textos {
         System.out.println("Entrada Inválida");
     }
 
+    public void mostrarQualEmpresa()
+    {
+        System.out.print(" 1 - Jatiboca\n  2 - Pontal\n   Opção -> ");
+    }
 
 }
