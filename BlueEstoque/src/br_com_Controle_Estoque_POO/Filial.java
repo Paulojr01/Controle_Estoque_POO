@@ -6,7 +6,8 @@ public class Filial {
     private String nome_filial; // this.
     private double estoque_filial; // this
     private double qtqEntrada;
-    private double soma;
+    private Textos texto  = new Textos();
+    
 
     public String getNome_filial() {
         return nome_filial;
@@ -42,47 +43,21 @@ public class Filial {
     }
 
 
-    public Double calcular (){
-        return soma =  qtqEntrada + estoque_filial;
+    public void somarEntrada (Double qtd){
+        this.setEstoque_filial(this.getEstoque_filial() + qtd );
+        System.out.println("\nestoque atualizado  " + this.getNome_filial() + this.getEstoque_filial());
 
     }
 
-    public void darBaixa(int qtde){
-        if (qtde <= this.estoque_filial)
-            this.estoque_filial -= qtde;
-        else
+    public void darBaixa(Double qtde){
+        if (qtde <= this.getEstoque_filial()){
+            this.setEstoque_filial(this.getEstoque_filial() - qtde);
+            texto.mostrarConsultaEstoque(this.getNome_filial(), this.getEstoque_filial());
+        }      
+        else{
           System.out.println("Impossível dar baixa no estoque");
+        }
+    }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
 }

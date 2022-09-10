@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args)  {
 
         String opcao = "";
-        String opcao2 = "";
+        double qtdMovimentacao = 0d;
         Textos texto = new Textos();
         Scanner ler = new Scanner(System.in);
 
@@ -25,40 +25,50 @@ public class Main {
             switch (opcao) {
                 case "1":  //Entrada de Estoque
                     texto.mostrarQualEmpresa();
-                    opcao2 = ler.next();
+                    opcao = ler.next();
 
-                    switch (opcao2){
+                    switch (opcao){
                         case "1":
-                            System.out.printf("Qual é a quantidade  que deseja da entrada Jatiboca->" + empresa1.getQtqEntrada());
-                            empresa1.calcular();  
-                            System.out.println("\nestoque atualizado jatiboca " + empresa1.calcular());
+                            System.out.println("Qual é a quantidade  que deseja da entrada "+empresa1.getNome_filial()+"->" );
+                            qtdMovimentacao = ler.nextDouble();
+                            empresa1.somarEntrada(qtdMovimentacao);
                         break;
 
                         case "2":
-                            System.out.printf("Qual é a quantidade  que deseja da entrada Pontal->" + empresa2.getQtqEntrada());
-                            empresa1.calcular();  
-                            System.out.println("\nestoque atualizado jatiboca " + empresa2.calcular());       
-                        break;    
+                            System.out.println("Qual é a quantidade  que deseja da entrada "+empresa2.getNome_filial()+" ->" );
+                            qtdMovimentacao = ler.nextDouble();
+                            empresa2.somarEntrada(qtdMovimentacao);       
+                        break;  
+
+                        default:
+                            texto.mostrarInvalida();
+                        break;  
                      }
                     break;
 
                     
                 case "2":// Saída de Estoque
                     texto.mostrarQualEmpresa();
-                    opcao2 = ler.next();
+                    opcao = ler.next();
 
-                    switch (opcao2){
+                    switch (opcao){
                         case "1":
-                            System.out.printf("quantidade atual->" + empresa1.getEstoque_filial());
-                            empresa1.darBaixa(10);
-                            System.out.println("\nestoque atualizado jatiboca " + empresa1.getEstoque_filial());
+                            System.out.println("quantidade atual->" + empresa1.getEstoque_filial());
+                            System.out.print("qual é quantidade a ser retirada ? -> ");
+                            qtdMovimentacao = ler.nextDouble();
+                            empresa1.darBaixa(qtdMovimentacao);
                             break;
 
                         case "2":
-                            System.out.printf("quantidade atual->" + empresa2.getEstoque_filial());
-                            empresa2.darBaixa(10);
-                            System.out.println("\nestoque atualizado jatiboca " + empresa2.getEstoque_filial());
-                         break;    
+                            System.out.println("quantidade atual->" + empresa2.getEstoque_filial());
+                            System.out.print("qual é quantidade a ser retirada ? -> ");
+                            qtdMovimentacao = ler.nextDouble();
+                            empresa2.darBaixa(qtdMovimentacao);
+                         break;   
+                         
+                         default:
+                         texto.mostrarInvalida();
+                         break; 
                         
                     }
                     break;
@@ -85,7 +95,7 @@ public class Main {
         } while (  ! opcao.equals("5") ); // diferente com String
 
 
-
+        ler.close();
         
 }
 
