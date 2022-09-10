@@ -2,7 +2,7 @@ package br_com_Controle_Estoque_POO;
 
 public class Textos {
 
-
+    
     public Textos() {} // construtor 
 
 
@@ -21,9 +21,13 @@ public class Textos {
     {
            System.out.print(" 1 - Jatiboca\n    2 - Pontal\n   Opção -> ");
 
-
     }
 
+    public void monstrarQtdEntrada()
+    {   
+       
+
+    }
 
     public void mostrarConsultaEstoque(String nomeFilial, Double estoque) {
         System.out.println("Estoque em "+ nomeFilial + " -> " + estoque + " kg "); 

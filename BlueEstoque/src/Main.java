@@ -7,11 +7,12 @@ public class Main {
     public static void main(String[] args)  {
 
         String opcao = "";
+        String opcao2 = "";
         Textos texto = new Textos();
         Scanner ler = new Scanner(System.in);
 
-        Filial empresa1 = new Filial("Jatiboca", 100);
-        Filial empresa2 = new Filial("Pontal", 50);
+        Filial empresa1 = new Filial("Jatiboca", 100, 32);
+        Filial empresa2 = new Filial("Pontal", 50, 32);
 
 
 
@@ -23,9 +24,25 @@ public class Main {
     
             switch (opcao) {
                 case "1":  //Entrada de Estoque
-                           texto.mostrarQualEmpresa();
+                    texto.mostrarQualEmpresa();
+                    opcao2 = ler.next();
+
+                    switch (opcao2){
+                        case "1":
+                            System.out.printf("Qual é a quantidade  que deseja da entrada Jatiboca->" + empresa1.getQtqEntrada());
+                            empresa1.soma(05);
+                            System.out.println("\nestoque atualizado jatiboca " + empresa1.getSoma());
+                        break;
+
+                        case "2":
+                            System.out.printf("Qual é a quantidade  que deseja da entrada Pontal->" + empresa2.getEstoque_filial());           
+                        break;    
+                     }
                     break;
-    
+
+
+
+                    
                 case "2":
                 // Saída de Estoque
                     break;
@@ -54,7 +71,6 @@ public class Main {
 
 
         
+}
 
-    }
-    
 }
