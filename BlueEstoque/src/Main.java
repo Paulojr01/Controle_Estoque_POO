@@ -11,10 +11,9 @@ public class Main {
 
         Filial empresa1 = new Filial("Jatiboca", 100);
         Filial empresa2 = new Filial("Pontal", 50);
-        
+
         do {
             
-        
             texto.mostrarMenuPrincipal();
     
             opcao = ler.next();
@@ -37,7 +36,7 @@ public class Main {
                     break;
     
                 case "5":
-                // Finalizar
+                        texto.mostrarDespedida();
                     break;
             
                 default:
