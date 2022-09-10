@@ -37,7 +37,8 @@ public class Main {
     
                 case "5":
                         texto.mostrarDespedida();
-                    break;
+                        
+                    break; 
             
                 default:
                     texto.mostrarInvalida();
