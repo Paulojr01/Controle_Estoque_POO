@@ -14,5 +14,8 @@ public class Textos {
         System.out.println("Entrada Inválida");
     }
 
+    public void mostrarDespedida(){
+        System.out.println("Bom dia e um bom trabalho !!! ");
+    }
 
 }
