@@ -5,12 +5,15 @@ import br_com_Controle_Estoque_POO.Textos;
 
 public class Main {
     public static void main(String[] args)  {
+
         String opcao = "";
         Textos texto = new Textos();
         Scanner ler = new Scanner(System.in);
 
         Filial empresa1 = new Filial("Jatiboca", 100);
         Filial empresa2 = new Filial("Pontal", 50);
+
+
 
         do {
             
@@ -19,8 +22,8 @@ public class Main {
             opcao = ler.next();
     
             switch (opcao) {
-                case "1": 
-                           texto.mostrarQualEmpresa(); //Entrada de Estoque
+                case "1":  //Entrada de Estoque
+                           texto.mostrarQualEmpresa();
                     break;
     
                 case "2":
@@ -31,13 +34,14 @@ public class Main {
                 // Transferência de Estoque
                     break;  
                 
-                case "4":
-                // Consulta Estoque
+                case "4":// Consulta Estoque
+                        texto.mostrarConsultaEstoque(empresa1.getNome_filial(), empresa1.getEstoque_filial());
+                        texto.mostrarConsultaEstoque(empresa2.getNome_filial(), empresa2.getEstoque_filial());
+                
                     break;
     
                 case "5":
-                        texto.mostrarDespedida();
-                        
+                    texto.mostrarDespedida();      
                     break; 
             
                 default:
@@ -52,4 +56,5 @@ public class Main {
         
 
     }
+    
 }
