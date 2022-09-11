@@ -16,8 +16,6 @@ public class Textos {
         System.out.println("Entrada Inválida");
     }
 
-
-
     public void mostrarQualEmpresa()
     {
            System.out.print(" 1 - Jatiboca\n    2 - Pontal\n   Opção -> ");
@@ -32,5 +30,9 @@ public class Textos {
         System.out.println("Bom dia e um bom trabalho !!! ");
     }
 
+    public void mostrarPerguntaQuantidadeEntrada(String local)
+    {
+        System.out.println("Qual é a quantidade  que deseja da entrada " + local + "->" );
+    }
 }
 

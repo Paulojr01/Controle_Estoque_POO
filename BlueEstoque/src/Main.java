@@ -30,13 +30,13 @@ public class Main {
 
                     switch (opcao){
                         case "1":
-                            System.out.println("Qual é a quantidade  que deseja da entrada "+empresa1.getNome_filial()+"->" );
+                           texto.mostrarPerguntaQuantidadeEntrada(empresa1.getNome_filial());
                             qtdMovimentacao = ler.nextDouble();
                             empresa1.somarEntrada(qtdMovimentacao);
                         break;
 
                         case "2":
-                            System.out.println("Qual é a quantidade  que deseja da entrada "+empresa2.getNome_filial()+" ->" );
+                            texto.mostrarPerguntaQuantidadeEntrada(empresa2.getNome_filial());
                             qtdMovimentacao = ler.nextDouble();
                             empresa2.somarEntrada(qtdMovimentacao);       
                         break;  
@@ -46,7 +46,6 @@ public class Main {
                         break;  
                      }
                     break;
-
                     
                 case "2":// Saída de Estoque
                     texto.mostrarQualEmpresa();
