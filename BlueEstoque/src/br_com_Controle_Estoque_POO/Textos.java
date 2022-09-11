@@ -2,7 +2,9 @@ package br_com_Controle_Estoque_POO;
 
 public class Textos {
 
+    
     public Textos() {} // construtor 
+
 
     public void mostrarMenuPrincipal()
     {
@@ -14,9 +16,27 @@ public class Textos {
         System.out.println("Entrada Inválida");
     }
 
+
+
     public void mostrarQualEmpresa()
     {
-        System.out.print(" 1 - Jatiboca\n  2 - Pontal\n   Opção -> ");
+           System.out.print(" 1 - Jatiboca\n    2 - Pontal\n   Opção -> ");
+
+    }
+
+    public void monstrarQtdEntrada()
+    {   
+       
+
+    }
+
+    public void mostrarConsultaEstoque(String nomeFilial, Double estoque) {
+        System.out.println("Estoque em "+ nomeFilial + " -> " + estoque + " kg "); 
+    }
+
+    public void mostrarDespedida(){
+        System.out.println("Bom dia e um bom trabalho !!! ");
     }
 
 }
+
