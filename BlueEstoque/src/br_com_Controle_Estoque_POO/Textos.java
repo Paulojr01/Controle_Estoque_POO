@@ -40,9 +40,3 @@ public class Textos {
 
 }
 
-    public void mostrarQualEmpresa()
-    {
-        System.out.print(" 1 - Jatiboca\n  2 - Pontal\n   Opção -> ");
-    }
-
-}
