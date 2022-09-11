@@ -24,12 +24,6 @@ public class Textos {
 
     }
 
-    public void monstrarQtdEntrada()
-    {   
-       
-
-    }
-
     public void mostrarConsultaEstoque(String nomeFilial, Double estoque) {
         System.out.println("Estoque em "+ nomeFilial + " -> " + estoque + " kg "); 
     }
