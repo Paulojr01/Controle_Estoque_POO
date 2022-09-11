@@ -15,7 +15,6 @@ public class Main {
         Filial empresa2 = new Filial("Pontal", 50, 32);
 
 
-
         do {
             
             texto.mostrarMenuPrincipal();
@@ -23,7 +22,9 @@ public class Main {
             opcao = ler.next();
     
             switch (opcao) {
+
                 case "1":  //Entrada de Estoque
+
                     texto.mostrarQualEmpresa();
                     opcao = ler.next();
 
@@ -77,15 +78,17 @@ public class Main {
                 // Transferência de Estoque
                     break;  
                 
+
                 case "4":// Consulta Estoque
                         texto.mostrarConsultaEstoque(empresa1.getNome_filial(), empresa1.getEstoque_filial());
                         texto.mostrarConsultaEstoque(empresa2.getNome_filial(), empresa2.getEstoque_filial());
                 
                     break;
+         
     
                 case "5":
-                    texto.mostrarDespedida();      
-                    break; 
+                        texto.mostrarDespedida();
+                  break; 
             
                 default:
                     texto.mostrarInvalida();
@@ -100,3 +103,4 @@ public class Main {
 }
 
 }
+

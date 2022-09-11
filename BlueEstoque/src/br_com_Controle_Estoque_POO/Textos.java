@@ -17,6 +17,7 @@ public class Textos {
     }
 
 
+
     public void mostrarQualEmpresa()
     {
            System.out.print(" 1 - Jatiboca\n    2 - Pontal\n   Opção -> ");
@@ -35,6 +36,13 @@ public class Textos {
 
     public void mostrarDespedida(){
         System.out.println("Bom dia e um bom trabalho !!! ");
+    }
+
+}
+
+    public void mostrarQualEmpresa()
+    {
+        System.out.print(" 1 - Jatiboca\n  2 - Pontal\n   Opção -> ");
     }
 
 }
