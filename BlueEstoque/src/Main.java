@@ -53,15 +53,15 @@ public class Main {
 
                     switch (opcao){
                         case "1":
-                            System.out.println("quantidade atual->" + empresa1.getEstoque_filial());
-                            System.out.print("qual é quantidade a ser retirada ? -> ");
+                        texto.mostrarConsultaEstoque(empresa1.getNome_filial(), empresa1.getEstoque_filial());
+                        texto.mostrarPerguntaQuantidadeRetirar( empresa1.getNome_filial() );
                             qtdMovimentacao = ler.nextDouble();
                             empresa1.darBaixa(qtdMovimentacao);
                             break;
 
                         case "2":
-                            System.out.println("quantidade atual->" + empresa2.getEstoque_filial());
-                            System.out.print("qual é quantidade a ser retirada ? -> ");
+                            texto.mostrarConsultaEstoque(empresa2.getNome_filial(), empresa2.getEstoque_filial());
+                            texto.mostrarPerguntaQuantidadeRetirar( empresa2.getNome_filial() );
                             qtdMovimentacao = ler.nextDouble();
                             empresa2.darBaixa(qtdMovimentacao);
                          break;   

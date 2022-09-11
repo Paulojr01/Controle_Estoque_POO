@@ -22,17 +22,24 @@ public class Textos {
 
     }
 
-    public void mostrarConsultaEstoque(String nomeFilial, Double estoque) {
+    public void mostrarConsultaEstoque(String nomeFilial, Double estoque) 
+    {
         System.out.println("Estoque em "+ nomeFilial + " -> " + estoque + " kg "); 
     }
 
-    public void mostrarDespedida(){
+    public void mostrarDespedida()
+    {
         System.out.println("Bom dia e um bom trabalho !!! ");
     }
 
-    public void mostrarPerguntaQuantidadeEntrada(String local)
+    public void mostrarPerguntaQuantidadeEntrada(String localidade)
     {
-        System.out.println("Qual é a quantidade  que deseja da entrada " + local + "->" );
+        System.out.println("Qual é a quantidade  que deseja da entrada " + localidade + "->" );
+    }
+
+    public void mostrarPerguntaQuantidadeRetirar(String localidade)
+    {
+        System.out.println("Qual a quantidade a ser retirada em  " + localidade + " ? ->");
     }
 }
 
