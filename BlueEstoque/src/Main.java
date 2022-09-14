@@ -73,8 +73,52 @@ public class Main {
                     }
                     break;
     
-                case "3":
-                // Transferência de Estoque
+                case "3":  // Transferência de Estoque
+                    ler = new Scanner(System.in);
+                    texto.QualEmpresaTransferencia();
+                    opcao = ler.nextLine();
+
+                    switch (opcao){
+                        case "1":
+                            texto.transferenciaEmpresa(empresa1.getNome_filial(), empresa2.getNome_filial());
+                            qtdMovimentacao = ler.nextDouble();
+                            if (qtdMovimentacao > empresa1.getEstoque_filial()){
+
+                                System.out.println("Impossível transferir de" + empresa1.getNome_filial() + " para " + empresa2.getNome_filial() + "estoque insuficiente!");
+                            }
+                            else{
+                                empresa1.setEstoque_filial(empresa1.getEstoque_filial() - qtdMovimentacao);
+                                empresa2.setEstoque_filial(empresa2.getEstoque_filial() + qtdMovimentacao);
+                                System.out.println("Estoque atualizado");
+                                texto.mostrarConsultaEstoque(empresa1.getNome_filial(),empresa1.getEstoque_filial());
+                                texto.mostrarConsultaEstoque(empresa2.getNome_filial(),empresa2.getEstoque_filial());
+                            }
+
+                        break;
+
+                        case "2":
+                            texto.transferenciaEmpresa(empresa2.getNome_filial(), empresa1.getNome_filial());
+                            qtdMovimentacao = ler.nextDouble();
+                            if (qtdMovimentacao > empresa2.getEstoque_filial()){
+
+                            System.out.println("Impossível transferir de" + empresa2.getNome_filial() + " para " + empresa1.getNome_filial() + "estoque insuficiente!");
+                        }
+                        else{
+                            empresa2.setEstoque_filial(empresa2.getEstoque_filial() - qtdMovimentacao);
+                            empresa1.setEstoque_filial(empresa1.getEstoque_filial() + qtdMovimentacao);
+                            System.out.println("Estoque atualizado");
+                            texto.mostrarConsultaEstoque(empresa1.getNome_filial(),empresa1.getEstoque_filial());
+                            texto.mostrarConsultaEstoque(empresa2.getNome_filial(),empresa2.getEstoque_filial());
+                        }
+
+                        break;
+
+                        default :
+                            System.out.println("opção invalida");
+                        break;
+
+                    }
+                           
                     break;  
                 
 
