@@ -41,5 +41,18 @@ public class Textos {
     {
         System.out.println("Qual a quantidade a ser retirada em  " + localidade + " ? ->");
     }
-}
 
+    public void Transferência (String remetente, String destinatario){
+        System.out.println("quantidade transferencia" + remetente + "para" + destinatario);
+
+    }
+
+    public void QualEmpresaTransferencia()
+    {
+           System.out.print("Qual empresa:\n 1 – Jatiboca -> Pontal \n 2 – Pontal -> Jatiboca\n Opção -> ");
+    }
+    
+    public void transferenciaEmpresa (String localidade1, String localidade2 ){
+        System.out.println("Quantidade de transferência de açúcar - " + localidade1 + " para " + localidade2 + " -> ");
+    }
+}
